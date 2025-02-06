@@ -23,9 +23,10 @@ function display(data){
 }
 
 calculate = () =>{
+    
     try {
         let result = new Function('return ' + input.value)();
-        input.value = result;
+        input.value = parseFloat(result.toFixed(2));
     } 
     catch (error) {
         input.value = "Error";
